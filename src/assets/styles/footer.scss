@@ -1,0 +1,255 @@
+footer {
+  background: $red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 0 0;
+  @include to(1180px) {
+    padding: 100px 0 0;
+  }
+  @include to(680px) {
+    padding: 40px 0 0;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: var(--fields80) 12fr 40px 12fr var(--fields80);
+    grid-template-areas: '. footer-top-left . footer-top-right';
+    width: 100%;
+    margin-bottom: 100px;
+    @include to(1180px) {
+      grid-template-columns: var(--fields80) 1fr var(--fields80);
+      grid-template-rows: auto auto;
+      row-gap: 40px;
+      grid-template-areas: '. footer-top-left .'
+      '. footer-top-right .';
+    }
+    @include to(680px) {
+      margin-bottom: 40px;
+    }
+    .footer-info {
+      grid-area: footer-top-left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: $wc;
+      &-title {
+        @include font-regular;
+        font-size: var(--title-font2);
+        text-transform: uppercase;
+      }
+      &-btnUp {
+        border: 2px solid $wc;
+        height: var(--arrow-btn);
+        width: var(--arrow-btn);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border .3s ease-in-out;
+        svg {
+          stroke: $wc;
+          transition: stroke .3s ease-in-out;
+        }
+        @include from(1023px) {
+          &:hover {
+            border: 2px solid $dark;
+            transition: border .3s ease-in-out;
+            svg {
+              stroke: $dark;
+              transition: stroke .3s ease-in-out;
+            }
+          }
+        }
+      }
+      .footer-info-col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        p {
+          @include font-regular;
+          font-size: var(--font20);
+          text-transform: uppercase;
+        }
+      }
+      .footer-head {
+        margin-bottom: 40px;
+      }
+      .footer-info-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .footer-info-bottom-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        .footer-email-tell, .footer-social {
+          span, p {
+            @include font-regular;
+            font-size: var(--font20);
+            text-transform: uppercase;
+            color: $wc;
+            transition: color .3s ease-in-out;
+            @include from(1023px) {
+              &:hover {
+                color: $dark;
+                transition: color .3s ease-in-out;
+              }
+            }
+          }
+        }
+        @include to(680px) {
+          justify-content: space-between;
+        }
+      }
+      .footer-info-row-left {
+        width: 270px;
+        @include to(1600px) {
+          width: 240px;
+        }
+        @include to(680px) {
+          width: 60%;
+        }
+      }
+      .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 30%;
+        @include to(680px) {
+          margin-left: initial;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        li {
+          margin-bottom: 12px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .desk {
+            display: flex;
+            @include to(680px) {
+              display: none;
+            }
+          }
+          .mob {
+            display: none;
+            @include to(680px) {
+              display: flex;
+            }
+          }
+        }
+      }
+      .footer-email-tell {
+        margin-bottom: 40px;
+      }
+      .white-btn {
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+    .footer-form-wrapper {
+      grid-area: footer-top-right;
+    }
+  }
+  .footer-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 60px;
+    height: 420px;
+    width: 100%;
+    position: relative;
+    @include to(1600px) {
+      height: 380px;
+    }
+    @include to(1180px) {
+      height: 388px;
+    }
+    @include to(768px) {
+      height: 359px;
+    }
+    @include to(680px) {
+      height: 420px;
+      padding: 0 40px 40px;
+    }
+    .footer-form-bg {
+      background-image: url("../../assets/images/footer-form-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      @include to(1600px) {
+        background-image: url("../../assets/images/footer-form-bg-1360.png");
+      }
+      @include to(1180px) {
+        background-image: url("../../assets/images/footer-form-bg-768.png");
+      }
+      @include to(680px) {
+        background-image: url("../../assets/images/footer-form-bg-360.png");
+      }
+    }
+    .call-popup-info {
+      width: 100%;
+    }
+    form {
+      align-items: flex-start;
+      .form-field__input {
+        height: 58px;
+      }
+      .submit-btn {
+        z-index: 1;
+      }
+      .form-field__input {
+        color: $dark;
+        &::placeholder {
+          color: $dark;
+        }
+      }
+      .form-field:not(#t) {
+        @include to(1600px) {
+          margin: 20px 0 0;
+        }
+      }
+    }
+    .form-title {
+      font-size: var(--font32);
+      z-index: 1;
+      p {
+        &:first-letter {
+          color: $dark;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 var(--fields80);
+    &__text {
+      @include font-regular;
+      color: $wc;
+      font-size: 16px;
+    }
+    .smarto-logo {
+      height: 71px;
+      width: 64px;
+      @include to(680px) {
+        width: 71px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.form-wrapper(data-call-popup data-form data-disable-page-scroll)
+    .popup.row
+        .call-popup-close-wrapper(data-close-form)
+            .call-popup-close
+                +svg('popup-close')
+        .call-popup-info
+            form(data-contact autocomplete="off")
+                .form-title
+                  p Заказать
+                  p звонок
+                .form-text Если у вас возникли вопросы или нужна консультация наши менеджеры с удовольствием помогут вам!
+                .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+                    input(type='text' name="name" placeholder="Имя").form-field__input
+                    .input-message(data-input-message)
+                .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+                    input(type='text' name="phone" placeholder="ваш номер").form-field__input
+                    .mask-absolute.js-mask-absolute Телефон
+                    .input-message(data-input-message)
+                .form-field.disabled.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+                    input(type='text' name="mail" placeholder="E-mail").form-field__input
+                    .input-message(data-input-message)
+                button( type="submit" data-btn-submit).submit-btn.link.red-btn
+                    span
+                        span(data-btn-submit-text) Отправить
+
+            .form-thanks-wrapper(data-call-thanks-popup)
+                .form-title Спасибо, Ваша заявка принята!
+                .form-text Наш менеджер свяжется с Вами в ближайшее время
+                a(href="index.html").form-thanks-btn.red-btn
+                  span На главную

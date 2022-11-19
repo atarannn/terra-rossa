@@ -1,0 +1,71 @@
+$default-font: "jost-light", sans-serif;
+$default-font2: "jost-regular", sans-serif;
+$default-font3: "jost-bold", sans-serif;
+
+$wc: #fff;
+$red: #E62A3E;
+$blue: #025A95;
+$dark:#15181F;
+
+:root {
+  --fields80: 80px;
+
+  --header-h: 150px;
+
+  --btn-h: 58px;
+
+  --arrow-btn: 60px;
+
+  --title-font: 96px;
+  --title-font2: 72px;
+
+  --font32: 32px;
+  --font28: 28px;
+  --font20: 20px;
+  --font18: 18px;
+}
+
+@media screen and (max-width: 1600px){
+  :root {
+    --fields80: 50px;
+
+    --header-h: 130px;
+
+    --btn-h: 46px;
+
+    --arrow-btn: 50px;
+
+    --title-font: 64px;
+    --title-font2: 64px;
+
+    --font32: 24px;
+    --font28: 18px;
+    --font20: 16px;
+    --font18: 14px;
+  }
+}
+
+@media screen and (max-width: 1180px){
+  :root {
+    --fields80: 20px;
+
+    --header-h: 112px;
+
+    --arrow-btn: 47px;
+  }
+}
+
+@media screen and (max-width: 680px){
+  :root {
+    --fields80: 12px;
+
+    --header-h: 70px;
+
+    --btn-h: 40px;
+
+    --arrow-btn: 40px;
+
+    --title-font: 36px;
+    --title-font2: 36px;
+  }
+}

@@ -1,0 +1,131 @@
+.page__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  min-height: 100vh;
+  height: auto;
+	background: $wc;
+	.page__content {
+		flex-grow: 1;
+	}
+	.page__footer-wrapper {
+		flex-shrink: 0;
+	}
+}
+
+.red-btn {
+  height: var(--btn-h);
+  width: fit-content;
+  border: 2px solid $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background: $wc;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  transform: translateZ(0);
+  span {
+    text-align: center;
+    position: relative;
+    display: block;
+    color: $wc;
+    @include font-regular;
+    font-size: var(--font18);
+    text-transform: uppercase;
+  }
+  > span {
+    overflow: hidden;
+    > span {
+      overflow: hidden;
+    }
+  }
+  &:before {
+    content: '';
+    background: $red;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include from(1023px) {
+    transform: translateZ(0);
+    &:hover {
+      cursor: pointer;
+      > span {
+        > span {
+          color: $dark;
+          animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+        }
+      }
+      &:before {
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+      }
+    }
+  }
+}
+
+.transparent-btn {
+  height: var(--btn-h);
+  width: 260px;
+  background: $dark;
+  border: 2px solid $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  transform: translateZ(0);
+  @include to(1600px) {
+    width: 174px;
+  }
+  span {
+    color: $dark;
+    @include font-regular;
+    font-size: var(--font18);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: block;
+  }
+  > span {
+    overflow: hidden;
+    > span {
+      overflow: hidden;
+    }
+  }
+  &:before {
+    content: '';
+    background: $wc;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include from(1023px) {
+    transform: translateZ(0);
+    &:hover {
+      cursor: pointer;
+      > span {
+        > span {
+          color: $wc;
+          animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+        }
+      }
+      &:before {
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+      }
+    }
+  }
+}

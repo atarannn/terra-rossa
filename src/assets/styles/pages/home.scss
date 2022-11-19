@@ -1,0 +1,893 @@
+.main {
+  position: relative;
+  @include to(1180px) {
+    height: 100vh;
+  }
+  .main-title-wrapper {
+    position: absolute;
+    left: 50%;
+    top: calc(var(--header-h) + 60px);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 var(--fields80);
+    overflow: hidden;
+    .main-title__top {
+      @include font-regular;
+      font-size: var(--font18);
+      color: $dark;
+      text-transform: uppercase;
+      letter-spacing: 0.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      position: relative;
+      @include to(680px) {
+        font-size: 8px;
+      }
+      .border-line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background: $dark;
+      }
+    }
+    .main-title__bottom {
+      @include font-light;
+      font-size: 280px;
+      color: $dark;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      position: relative;
+      .border-line-top {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background: $dark;
+      }
+      .border-line-bottom {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: $dark;
+      }
+      @include to(1600px) {
+        font-size: 200px;
+      }
+      @include to(1180px) {
+        font-size: 110px;
+      }
+      @include to(680px) {
+        font-size: 56px;
+      }
+      .left {
+        &:first-letter {
+          color: $red;
+        }
+      }
+      .right {
+        &:first-letter {
+          color: $red;
+        }
+      }
+    }
+  }
+  .scrollDown {
+    border: 2px solid $wc;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: var(--fields80);
+    bottom: var(--fields80);
+    cursor: pointer;
+    svg {
+      stroke: $wc;
+    }
+    @include to(1600px) {
+      height: 90px;
+      width: 90px;
+    }
+    @include to(1180px) {
+      height: 70px;
+      width: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include to(680px) {
+      height: 50px;
+      width: 50px;
+      svg {
+        height: 50%;
+      }
+    }
+  }
+  .parallax-image {
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-block1 {
+    position: absolute;
+    left: var(--fields80);
+    top: 27%;
+    padding: 8px 20px 20px 8px;
+    width: 295px;
+    &-bg {
+      background-image: url("../../assets/images/main/main-block-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      backdrop-filter: blur(7px);
+    }
+    @include to(1180px) {
+      display: none;
+    }
+  }
+  .main-block2 {
+    position: absolute;
+    right: var(--fields80);
+    top: 33%;
+    padding: 8px 20px 20px 8px;
+    width: 295px;
+    &-bg {
+      background-image: url("../../assets/images/main/main-block-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      backdrop-filter: blur(7px);
+    }
+    @include to(1180px) {
+      display: none;
+    }
+  }
+  .main-block3 {
+    position: absolute;
+    left: var(--fields80);
+    top: 55%;
+    padding: 8px 20px 20px 8px;
+    width: 295px;
+    &-bg {
+      background-image: url("../../assets/images/main/main-block-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      backdrop-filter: blur(7px);
+      z-index: -1;
+    }
+    @include to(1180px) {
+      display: none;
+    }
+  }
+  .main-block-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    p {
+      @include font-regular;
+      font-size: 24px;
+      color: $dark;
+      text-transform: uppercase;
+      width: 80%;
+      @include to(1600px) {
+        font-size: 20px;
+      }
+
+    }
+  }
+}
+.about {
+  position: relative;
+  .parallax-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 140px;
+    width: 788px;
+    position: absolute;
+    left: var(--fields80);
+    top: 188px;
+    background-image: url("../../assets/images/about-title-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 22px;
+    @include to(1600px) {
+      width: 590px;
+      height: 120px;
+      padding: 20px 20px 30px;
+    }
+    @include to(1180px) {
+      top: 100px;
+      right: var(--fields80);
+      width: auto;
+      height: 158px;
+      padding: 20px;
+    }
+    @include to(680px) {
+      top: 40px;
+      height: 205px;
+      background-image: url("../../assets/images/about-title-bg-360.png");
+      flex-direction: column;
+    }
+    .about-title {
+      @include font-regular;
+      font-size: var(--title-font);
+      color: $dark;
+      text-transform: uppercase;
+      width: 45%;
+      padding-right: 20px;
+      border-right: 1px solid $dark;
+      @include to(1180px) {
+        width: 50%;
+      }
+      @include to(680px) {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 12px;
+        border-right: none;
+        border-bottom: 2px solid $dark;
+      }
+    }
+    .about-text {
+      @include font-regular;
+      font-size: var(--font20);
+      color: $dark;
+      text-transform: uppercase;
+      width: 45%;
+      padding-left: 20px;
+      line-height: 120%;
+      @include to(1600px) {
+        width: 50%;
+      }
+      @include to(680px) {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 12px;
+      }
+      span {
+        @include font-bold;
+        margin-left: .5rem;
+      }
+    }
+  }
+  .about-text-block {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    @include font-regular;
+    font-size: var(--font18);
+    text-transform: uppercase;
+    color: $wc;
+    background-image: url("../../assets/images/about-block-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 342px;
+    height: 205px;
+    padding: 84px 20px 20px;
+    line-height: 120%;
+    backdrop-filter: blur(1px);
+    overflow: hidden;
+    @include to(1600px) {
+      width: 275px;
+      height: 185px;
+      padding: 76px 20px 20px;
+    }
+    @include to(1180px) {
+      top: 18%;
+      left: var(--fields80);
+      transform: none;
+    }
+    @include to(575px) {
+      top: 16%;
+    }
+    span {
+      @include font-bold;
+      margin-right: .5rem;
+    }
+  }
+  .about-text-block2 {
+    position: absolute;
+    right: var(--fields80);
+    top: 50%;
+    @include font-regular;
+    font-size: var(--font18);
+    text-transform: uppercase;
+    color: $wc;
+    background-image: url("../../assets/images/about-block-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 383px;
+    height: 260px;
+    padding: 109px 20px 20px;
+    line-height: 120%;
+    backdrop-filter: blur(1px);
+    span {
+      @include font-bold;
+      margin-right: .5rem;
+    }
+    @include to(1600px) {
+      width: 314px;
+      height: 211px;
+      padding: 90px 20px 20px;
+    }
+    @include to(1180px) {
+      top: 32%;
+      left: var(--fields80);
+      transform: none;
+    }
+    @include to(575px) {
+      top: 29%;
+    }
+  }
+  .about-text-block3 {
+    position: absolute;
+    left: var(--fields80);
+    top: 60%;
+    @include font-regular;
+    font-size: var(--font18);
+    text-transform: uppercase;
+    color: $wc;
+    background-image: url("../../assets/images/about-block-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 428px;
+    height: 292px;
+    padding: 120px 20px 20px;
+    line-height: 120%;
+    backdrop-filter: blur(1px);
+    span {
+      @include font-bold;
+      margin-right: .5rem;
+    }
+    @include to(1600px) {
+      width: 341px;
+      height: 228px;
+      padding: 89px 20px 20px;
+    }
+    @include to(1180px) {
+      top: 48%;
+      left: var(--fields80);
+      transform: none;
+    }
+    @include to(575px) {
+      top: 44%;
+    }
+  }
+}
+
+.infrastructure {
+  &-title {
+    @include font-regular;
+    font-size: var(--title-font2);
+    color: $wc;
+    text-transform: uppercase;
+  }
+  &__content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: initial;
+    @include to(1180px) {
+      flex-direction: column;
+    }
+  }
+  .infrastructure__list {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 135px var(--fields80);
+    background: $red;
+    @include to(1180px) {
+      width: 100%;
+      background: $blue;
+      padding: 0 var(--fields80) 100px;
+    }
+    @include to(680px) {
+      padding: 0 var(--fields80) 40px;
+    }
+    .mob {
+      display: none;
+      @include to(1180px) {
+        display: flex;
+        margin-bottom: 8px;
+        height: 372px;
+        object-fit: cover;
+      }
+      @include to(680px) {
+        height: 171px;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      overflow: hidden;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      width: 100%;
+      @include to(1180px) {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 40px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+    &-toggle {
+      cursor: pointer;
+      @include font-regular;
+      text-transform: uppercase;
+      color: $wc;
+      font-size: var(--font32);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color .3s ease-in-out;
+      @include to(1180px) {
+        margin-top: 8px;
+      }
+      @include from(1023px) {
+        &:hover {
+          color: $dark;
+          transition: color .3s ease-in-out;
+        }
+      }
+    }
+  }
+  &__img-wrapper {
+    height: 110vh;
+    position: sticky;
+    top: 0;
+    gap: 40px;
+    padding: 135px var(--fields80);
+    width: 50%;
+    background: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include to(1600px) {
+      gap: 20px;
+    }
+    @include to(1180px) {
+      height: auto;
+      position: static;
+      width: 100%;
+      padding: 100px var(--fields80);
+    }
+    @include to(680px) {
+      padding: 40px var(--fields80);
+    }
+    .infra-img {
+      height: 400px;
+      width: 100%;
+      background: $wc;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+      @include to(1600px) {
+        height: 290px;
+      }
+      @include to(680px) {
+        height: 240px;
+      }
+    }
+    .infrastructure__img__text-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      gap: 40px;
+      font-family: $default-font2;
+      font-style: normal;
+      text-transform: uppercase;
+      color: #ADCADE;
+      @include to(680px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .infrastructure__img__text-left {
+        width: 60%;
+        font-size: var(--font28);
+        line-height: 120%;
+        span {
+          font-family: $default-font3;
+          line-height: 120%;
+          font-weight: 700;
+          color: $wc;
+          margin-right: .7rem;
+          margin-left: .7rem;
+        }
+        @include to(680px) {
+          width: 100%;
+        }
+      }
+      .infrastructure__img__text-right {
+        width: 40%;
+        font-size: var(--font18);
+        line-height: 120%;
+        span {
+          font-family: $default-font3;
+          line-height: 120%;
+          font-weight: 700;
+          color: $wc;
+          margin-right: .7rem;
+        }
+        @include to(1180px) {
+          width: 65%;
+        }
+        @include to(680px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.apartments {
+  background: $dark;
+  padding: 208px 0;
+  display: grid;
+  grid-template-columns: var(--fields80) repeat(24, 1fr) var(--fields80);
+  grid-template-rows: repeat(6, auto) 39px auto auto;
+  grid-template-areas: '. title title title title title title title . . . . . img1 img1 img1 img1 img1 img1 . img2 img2 img2 . . .'
+  '. text text text text text text text . . . . . img1 img1 img1 img1 img1 img1 . img2 img2 img2 . . .'
+  '. . . . . . . . . . . . . img1 img1 img1 img1 img1 img1 . . . . . . .'
+  '. . . . . . . . img3 img3 img3 . . img1-text img1-text img1-text img1-text img1-text img1-text . list list list list list .'
+  '. img4 img4 img4 img4 img4 img4 img4 img3 img3 img3 . . . . . . . . . list list list list list .'
+  '. img4 img4 img4 img4 img4 img4 img4 img3 img3 img3 . . . . . . . . . list list list list list .'
+  '. img4 img4 img4 img4 img4 img4 img4 . . . . . . . . . . . . list list list list list .'
+  '. img4 img4 img4 img4 img4 img4 img4 . . . . . . . . . . . . list list list list list .'
+  '. img4 img4 img4 img4 img4 img4 img4 . . img5 img5 img5 img5 img5 img5 img5 img5 img5 . list list list list list .'
+  '. img6 img6 img6 . . . . . . img5 img5 img5 img5 img5 img5 img5 img5 img5 . list list list list list .';
+  column-gap: 20px;
+  row-gap: 20px;
+  @include to(1180px) {
+    grid-template-columns: var(--fields80) 1fr repeat(4, 1fr) 1fr  var(--fields80);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: '. title title title title title img2 .'
+    '. text text text text text img2 .'
+    '. img1 img1 img1 img1 img1 img1 .'
+    '. img3 img1-text img1-text img1-text img1-text . .'
+    '. img3 list list list list . .'
+    '. . list list list list img6 .'
+    '. img4 img4 img4 img4 img4 img4 .';
+    padding: 100px 0;
+  }
+  @include to(680px) {
+    padding: 40px 0;
+    grid-template-columns: var(--fields80) 1fr 1fr  var(--fields80);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: '. img1 img1 .'
+      '. title title .'
+    '. text text .'
+    '. img3 img6 .'
+    '. img1-text img1-text .'
+    '. list list .'
+    '. img5 img5 .';
+  }
+  &-list__wrapper {
+    grid-area: list;
+    width: fit-content;
+    .apartments-list {
+      margin-bottom: 50px;
+      @include to(1180px) {
+        margin-bottom: 32px;
+      }
+      li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
+        padding-top: 20px;
+        @include to(1180px) {
+          padding-bottom: 12px;
+          padding-top: 12px;
+        }
+        &:first-child {
+          padding-top: 0;
+        }
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        &.apartments-list-white {
+          @include font-regular;
+          color: #ADCADE;
+          text-transform: uppercase;
+          font-size: var(--font18);
+          span {
+            color: $wc;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+  &-title {
+    grid-area: title;
+    @include font-regular;
+    color: $wc;
+    font-size: var(--title-font2);
+    text-transform: uppercase;
+  }
+  &-text {
+    grid-area: text;
+    @include font-regular;
+    color: #ADCADE;
+    text-transform: uppercase;
+    font-size: var(--font18);
+  }
+  &-img1 {
+    grid-area: img1;
+    overflow: hidden;
+    &__subtitle {
+      grid-area: img1-text;
+      @include font-regular;
+      color: #ADCADE;
+      text-transform: uppercase;
+      font-size: var(--font32);
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    @include to(1180px) {
+      height: 372px;
+    }
+    @include to(680px) {
+      height: 172px;
+    }
+  }
+  &-img2 {
+    grid-area: img2;
+    overflow: hidden;
+    height: 202px;
+    width: 202px;
+    @include to(1600px) {
+      height: 140px;
+      width: 140px;
+    }
+    @include to(680px) {
+      display: none;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-img3 {
+    grid-area: img3;
+    overflow: hidden;
+    height: 202px;
+    width: 202px;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    @include to(1600px) {
+      height: 140px;
+      width: 140px;
+    }
+    @include to(680px) {
+      height: 162px;
+      width: 162px;
+    }
+  }
+  &-img4 {
+    grid-area: img4;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    @include to(1180px) {
+      height: 372px;
+    }
+    @include to(680px) {
+      display: none;
+    }
+  }
+  &-img5 {
+    grid-area: img5;
+    position: relative;
+    @include to(1180px) {
+      display: none;
+    }
+    @include to(680px) {
+      display: flex;
+      height: 172px;
+      svg {
+        display: none;
+      }
+    }
+    &-wrapper {
+      overflow: hidden;
+      @include to(680px) {
+        width: 100%;
+      }
+    }
+    svg {
+      position: absolute;
+      left: -20px;
+      top: -20px;
+      height: 40px;
+      width: 40px;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-img6 {
+    grid-area: img6;
+    overflow: hidden;
+    height: 202px;
+    width: 202px;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    @include to(1600px) {
+      height: 140px;
+      width: 140px;
+    }
+    @include to(680px) {
+      height: 162px;
+      width: 162px;
+    }
+  }
+}
+
+.gallery {
+  background: $blue;
+  padding: 245px 0;
+  @include to(1600px) {
+    padding: 100px 0 130px;
+  }
+  @include to(680px) {
+    padding: 40px 0 60px;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  &-title-block {
+    @include font-regular;
+    color: $wc;
+    text-transform: uppercase;
+    font-size: var(--title-font2);
+  }
+  .gallery-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .btn-swiper-left, .btn-swiper-right {
+    height: var(--arrow-btn);
+    width: var(--arrow-btn);
+    background: $wc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+    svg {
+      stroke: $dark;
+      transition: stroke .3s ease-in-out;
+    }
+    @media screen and (min-width: 1023px){
+      &:hover {
+        background: $red;
+        transition: background .3s ease-in-out;
+        svg {
+          stroke: $wc;
+          transition: stroke .3s ease-in-out;
+        }
+      }
+    }
+  }
+  &-swiper-wrapper {
+    position: relative;
+    width: 100%;
+    .gallery-swiper__elipse-top {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 100%;
+      height: 68px;
+      background: $blue;
+      z-index: 100;
+      border-radius: 0 0 100% 100%;
+      @include to(680px) {
+        height: 42px;
+      }
+    }
+    .gallery-swiper__elipse-bottom {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 68px;
+      background: $blue;
+      z-index: 100;
+      border-radius: 100% 100% 0 0;
+      @include to(680px) {
+        height: 42px;
+      }
+    }
+    .swiper-gallery {
+      height: fit-content;
+      overflow: hidden;
+      .swiper-slide {
+        height: 790px;
+        img {
+          height: 100%;
+          cursor: pointer;
+        }
+        @include to(1600px) {
+          height: 600px;
+        }
+        @include to(680px) {
+          height: 400px;
+        }
+      }
+    }
+  }
+}

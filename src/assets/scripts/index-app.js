@@ -104,6 +104,22 @@ footerForm.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
+          function callThanksPopup() {
+            const submitBtn = document.querySelectorAll('[data-call-thanks-popup]');
+            const form = document.querySelector('[data-footer-thanks]');
+            const close = document.querySelectorAll('[data-close-footer-thanks]');
+            submitBtn.forEach(elem => {
+              form.classList.add('active');
+              form.style.transition = 'opacity .3s ease-in-out, visibility .3s ease-in-out'
+            });
+            close.forEach(el => {
+              el.addEventListener('click', () => {
+                form.classList.remove('active');
+                form.style.transition = 'opacity .3s ease-in-out, visibility .3s ease-in-out'
+              })
+            })
+          }
+          callThanksPopup();
         },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {

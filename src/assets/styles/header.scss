@@ -108,7 +108,7 @@ header {
         display: flex;
         flex-direction: column;
         position: relative;
-        width: 35px;
+        width: 50px;
         height: 20px;
         margin-right: var(--header-ofset50);
         @include to(1600px) {
@@ -203,7 +203,7 @@ header {
       li {
         margin-right: var(--header-ofset30);
         overflow: hidden;
-        height: 22px;
+        height: 25px;
         &:last-child {
           margin-right: 0;
         }

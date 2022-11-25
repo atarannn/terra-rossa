@@ -17,13 +17,11 @@ const lang = langDetect();
     debug: true,
     resources: {
       ru: {
-        // Тексты конкретного языка
         translation: {
-          // Так называемый namespace по умолчанию
           name: 'Имя:*',
           phone: 'Телефон:*',
           send: 'Отправить',
-          sending: 'Отправка',
+          sending: 'Отправить',
           field_too_short: 'телефон должен содержать не менее {{cnt}} символов',
           field_too_long: 'телефон должен содержать не более {{cnt}} символов',
           only_number: 'здесь только цифры',
@@ -43,13 +41,11 @@ const lang = langDetect();
         },
       },
       uk: {
-        // Тексты конкретного языка
         translation: {
-          // Так называемый namespace по умолчанию
           name: 'Ім’я:*',
           phone: 'Телефон:*',
           send: 'Надіслати',
-          sending: 'Відправлення',
+          sending: 'Надіслати',
           field_too_short: 'телефон має містити принаймні {{cnt}} символів',
           field_too_long: 'телефон має містити не більше {{cnt}} символів',
           only_number: 'тут лише цифри',
@@ -71,13 +67,11 @@ const lang = langDetect();
         },
       },
       en: {
-        // Тексты конкретного языка
         translation: {
-          // Так называемый namespace по умолчанию
           name: 'Name:*',
           phone: 'Phone:*',
           send: 'Sand',
-          sending: 'Sanding',
+          sending: 'Sand',
           field_too_short: 'phone must be at least {{cnt}} characters',
           field_too_long: 'phone must be at most {{cnt}} characters',
           only_number: 'only digits here',

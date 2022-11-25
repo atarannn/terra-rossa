@@ -134,7 +134,7 @@
     left: var(--fields80);
     top: 27%;
     padding: 8px 20px 20px 8px;
-    width: 295px;
+    width: 317px;
     &-bg {
       background-image: url("../../assets/images/main/main-block-bg.png");
       background-repeat: no-repeat;
@@ -156,7 +156,7 @@
     right: var(--fields80);
     top: 33%;
     padding: 8px 20px 20px 8px;
-    width: 295px;
+    width: 317px;
     &-bg {
       background-image: url("../../assets/images/main/main-block-bg.png");
       background-repeat: no-repeat;
@@ -178,7 +178,7 @@
     left: var(--fields80);
     top: 55%;
     padding: 8px 20px 20px 8px;
-    width: 295px;
+    width: 317px;
     &-bg {
       background-image: url("../../assets/images/main/main-block-bg.png");
       background-repeat: no-repeat;
@@ -200,6 +200,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 8px;
+    width: 95%;
     p {
       @include font-regular;
       font-size: 24px;
@@ -278,7 +279,7 @@
       width: 45%;
       padding-left: 20px;
       line-height: 120%;
-      @include to(1600px) {
+      @include to(1680px) {
         width: 50%;
       }
       @include to(680px) {
@@ -304,16 +305,24 @@
     background-image: url("../../assets/images/about-block-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 342px;
-    height: 205px;
-    padding: 84px 20px 20px;
+    width: 380px;
+    height: 250px;
+    padding: 20px 30px 30px 20px;
+    gap: 20px;
     line-height: 120%;
     backdrop-filter: blur(1px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    span {
+      @include font-bold;
+      margin-right: .5rem;
+    }
     @include to(1600px) {
-      width: 275px;
-      height: 185px;
-      padding: 76px 20px 20px;
+      width: 340px;
+      height: 250px;
     }
     @include to(1180px) {
       top: 18%;
@@ -321,11 +330,8 @@
       transform: none;
     }
     @include to(575px) {
+      width: 340px;
       top: 16%;
-    }
-    span {
-      @include font-bold;
-      margin-right: .5rem;
     }
   }
   .about-text-block2 {
@@ -339,19 +345,23 @@
     background-image: url("../../assets/images/about-block-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 383px;
-    height: 260px;
-    padding: 109px 20px 20px;
+    width: 380px;
+    height: 250px;
+    padding: 20px 30px 30px 20px;
+    gap: 20px;
     line-height: 120%;
     backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     span {
       @include font-bold;
       margin-right: .5rem;
     }
     @include to(1600px) {
-      width: 314px;
-      height: 211px;
-      padding: 90px 20px 20px;
+      width: 340px;
+      height: 250px;
     }
     @include to(1180px) {
       top: 32%;
@@ -359,7 +369,8 @@
       transform: none;
     }
     @include to(575px) {
-      top: 29%;
+      width: 340px;
+      top: 30%;
     }
   }
   .about-text-block3 {
@@ -373,19 +384,23 @@
     background-image: url("../../assets/images/about-block-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 428px;
-    height: 292px;
-    padding: 120px 20px 20px;
+    width: 420px;
+    height: 250px;
+    padding: 20px 30px 30px 20px;
+    gap: 20px;
     line-height: 120%;
     backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     span {
       @include font-bold;
       margin-right: .5rem;
     }
     @include to(1600px) {
-      width: 341px;
-      height: 228px;
-      padding: 89px 20px 20px;
+      width: 360px;
+      height: 250px;
     }
     @include to(1180px) {
       top: 48%;
@@ -393,6 +408,7 @@
       transform: none;
     }
     @include to(575px) {
+      width: 340px;
       top: 44%;
     }
   }

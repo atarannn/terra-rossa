@@ -53,6 +53,9 @@ footer {
           stroke: $grey;
           transform: scale(1);
           transition: transform .3s ease-in-out;
+          @include to(680px) {
+            transform: scale(0.7);
+          }
         }
         @include from(1023px) {
           &:hover {
@@ -81,6 +84,9 @@ footer {
         align-items: flex-start;
         justify-content: flex-start;
         margin: 40px 0 16px 0;
+        @include to(680px) {
+          flex-direction: column;
+        }
         a {
           display: flex;
           align-items: center;
@@ -102,6 +108,9 @@ footer {
             svg {
               transform: scale(1);
               transition: transform .3s ease-in-out;
+              @include to(680px) {
+                transform: scale(0.7);
+              }
             }
           }
           @include from(1023px) {
@@ -125,11 +134,18 @@ footer {
         justify-content: flex-start;
         width: 45%;
         gap: 16px;
+        @include to(680px) {
+          width: 100%;
+        }
       }
       .footer-location {
         width: 45%;
         p {
           width: 80%;
+        }
+        @include to(680px) {
+          width: 100%;
+          margin-top: 16px;
         }
       }
       .footer-social {
@@ -149,6 +165,9 @@ footer {
           svg {
             transform: scale(1);
             transition: transform .3s ease-in-out;
+            @include to(680px) {
+              transform: scale(0.7);
+            }
           }
           @include from(1023px) {
             &:hover {
@@ -188,7 +207,7 @@ footer {
       align-items: flex-start;
       padding: 40px 60px;
       @include to(680px) {
-        padding: 20px 40px;
+        padding: 20px 30px;
       }
       .form-field__input {
         height: 60px;
@@ -242,10 +261,9 @@ footer {
       font-size: 16px;
     }
     .smarto-logo {
-      height: 71px;
-      width: 64px;
-      @include to(680px) {
-        width: 71px;
+      img {
+        height: 71px;
+        width: 64px;
       }
     }
   }

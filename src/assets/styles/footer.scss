@@ -238,7 +238,7 @@ footer {
     padding: 0 var(--fields80);
     &__text {
       @include font-regular;
-      color: $wc;
+      color: $grey;
       font-size: 16px;
     }
     .smarto-logo {

@@ -4,6 +4,7 @@ dist
 node_modules
 src/assets/scripts/gulp-modules/ts
 src/assets/scripts/libs
+src
 /.git
 /.vscode
 
